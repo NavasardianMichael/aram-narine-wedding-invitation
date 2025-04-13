@@ -21,7 +21,7 @@ function App() {
     const timer = setInterval(() => {
       const now = dayjs();
       const diff = weddingDate.diff(now, 'second');
-      
+
       if (diff <= 0) {
         clearInterval(timer);
         return;
@@ -61,7 +61,12 @@ function App() {
           <div className="absolute inset-0 w-full h-full">
             <Image
               src={IMAGES.hero}
-              preview={false}
+              preview={{
+                maskClassName: 'w-full h-full',
+                imageRender: () => (
+                  <img src={IMAGES.hero} className="h-[80vh] object-contain" />
+                )
+              }}
               alt="Հարսանեկան լուսանկար"
               className="w-full h-full object-cover"
             />
@@ -75,7 +80,7 @@ function App() {
               <div className="space-y-4">
                 <Text className="block text-2xl md:text-3xl text-dark font-serif">Մայիսի 17, 2025</Text>
                 <Text className="block text-xl md:text-2xl">ԼՈՍ ԱՆՋԵԼԵՍ, ԿԱԼԻՖՈՐՆԻԱ</Text>
-                
+
                 {/* Countdown Display */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-8">
                   <div className="bg-white/90 backdrop-blur p-4 rounded-none">
@@ -112,13 +117,19 @@ function App() {
                 <Image
                   src={IMAGES.story.howWeMet}
                   alt="Ինչպես հանդիպեցինք"
+                  preview={{
+                    maskClassName: 'w-full h-full',
+                    imageRender: () => (
+                      <img src={IMAGES.story.howWeMet} className="h-[80vh] object-contain" />
+                    )
+                  }}
                   className="w-full h-64 object-cover mb-6"
                 />
                 <Title level={3} className="!text-primary">Ինչպես հանդիպեցինք</Title>
                 <Text className="text-lg block">23.04.19</Text>
                 <Text className="text-lg block leading-relaxed">
-                  Մենք հանդիպեցինք տեղական սրճարանում մի արևոտ կեսօրին։ Սուրճի շուրջ սկսված զրույցը 
-                  վերածվեց ժամերի խոսակցության մեր ճանապարհորդելու, երաժշտության և ապագայի երազանքների 
+                  Մենք հանդիպեցինք տեղական սրճարանում մի արևոտ կեսօրին։ Սուրճի շուրջ սկսված զրույցը
+                  վերածվեց ժամերի խոսակցության մեր ճանապարհորդելու, երաժշտության և ապագայի երազանքների
                   մասին։ Երբեմն կյանքի լավագույն պահերը գալիս են, երբ դրանք ամենաքիչն ես սպասում։
                 </Text>
               </div>
@@ -126,13 +137,19 @@ function App() {
                 <Image
                   src={IMAGES.story.proposal}
                   alt="Առաջարկություն"
+                  preview={{
+                    maskClassName: 'w-full h-full',
+                    imageRender: () => (
+                      <img src={IMAGES.story.proposal} className="h-[80vh] object-contain" />
+                    )
+                  }}
                   className="w-full h-64 object-cover mb-6"
                 />
                 <Title level={3} className="!text-primary">Առաջարկությունը</Title>
                 <Text className="text-lg block">23.04.22</Text>
                 <Text className="text-lg block leading-relaxed">
-                  Աստղազարդ երկնքի տակ, Գրիֆիթ Օբսերվատորիայում՝ մեր սիրելի վայրում, Լոս Անջելեսի 
-                  քաղաքային լույսերի տեսարանի ներքո, Արամը ծնկի եկավ։ Այն քաղաքի հրաշալի տեսարանի 
+                  Աստղազարդ երկնքի տակ, Գրիֆիթ Օբսերվատորիայում՝ մեր սիրելի վայրում, Լոս Անջելեսի
+                  քաղաքային լույսերի տեսարանի ներքո, Արամը ծնկի եկավ։ Այն քաղաքի հրաշալի տեսարանի
                   ներքո, որտեղ սկսվեց մեր սիրո պատմությունը, մենք որոշեցինք միասին սկսել մեր հավերժությունը։
                 </Text>
               </div>
@@ -157,7 +174,7 @@ function App() {
           </div>
           <div className="max-w-4xl mx-auto px-4 relative z-10">
             <Title level={2} className="text-center mb-16 font-serif text-4xl">Տոնակատարությունը</Title>
-            
+
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <Card className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur">
                 <CalendarOutlined className="text-4xl text-primary mb-4" />
@@ -236,6 +253,12 @@ function App() {
                   <Image
                     src={image}
                     alt={`Պատկեր ${index + 1}`}
+                    preview={{
+                      maskClassName: 'w-full h-full',
+                      imageRender: () => (
+                        <img src={image} className="h-[80vh] object-contain" />
+                      )
+                    }}
                     className="w-full h-full object-cover"
                   />
                 </div>
