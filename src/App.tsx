@@ -1,20 +1,28 @@
+import heroImage from './assets/images/IMG_3586.jpg';
+import proposalImage from './assets/images/IMG_7183.jpg';
+import galleryImage1 from './assets/images/IMG_6184.jpg';
+import galleryImage2 from './assets/images/IMG_1181.jpg';
+import galleryImage3 from './assets/images/IMG_0819.jpg';
+import galleryImage4 from './assets/images/IMG_3845.jpg';
+import galleryImage5 from './assets/images/IMG_5596.jpg';
+import galleryImage6 from './assets/images/IMG_8891.jpg';
 import { CalendarOutlined, EnvironmentOutlined } from '@ant-design/icons';
 import { Card, ConfigProvider, Flex, Image, Timeline, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 
 const IMAGES = {
-  hero: './src/assets/images/IMG_3586.jpg',
+  hero: heroImage,
   story: {
-    proposal: './src/assets/images/IMG_7183.jpg',
+    proposal: proposalImage,
   },
   gallery: [
-    './src/assets/images/IMG_6184.jpg',
-    './src/assets/images/IMG_1181.jpg',
-    './src/assets/images/IMG_0819.JPG',
-    './src/assets/images/IMG_3845.jpg',
-    './src/assets/images/IMG_5596.jpg',
-    './src/assets/images/IMG_8891.JPG',
+    galleryImage1,
+    galleryImage2,
+    galleryImage3,
+    galleryImage4,
+    galleryImage5,
+    galleryImage6,
   ],
   venue: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=500&fit=crop'
 };
@@ -82,7 +90,7 @@ function App() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-secondary/90"></div>
           </div>
-          <div className="text-center max-w-4xl mx-auto relative z-10">
+          <div className="text-center max-w-4xl mx-auto relative z-10 translate-y-[200px]">
             <div className="space-y-8">
               <Title level={1} className="font-serif text-6xl md:text-8xl !text-dark mb-0">
                 Արամ և Նարինե
@@ -92,19 +100,19 @@ function App() {
 
                 {/* Countdown Display */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-8">
-                  <div className="bg-white/90 backdrop-blur p-4 rounded-none">
+                  <div className="bg-white/90 backdrop-blur p-4 !rounded-lg">
                     <div className="text-3xl font-bold text-primary">{timeLeft.days}</div>
                     <div className="text-sm uppercase tracking-wider opa">{timeLabels.days}</div>
                   </div>
-                  <div className="bg-white/90 backdrop-blur p-4 rounded-none">
+                  <div className="bg-white/90 backdrop-blur p-4 !rounded-lg">
                     <div className="text-3xl font-bold text-primary">{timeLeft.hours}</div>
                     <div className="text-sm uppercase tracking-wider">{timeLabels.hours}</div>
                   </div>
-                  <div className="bg-white/90 backdrop-blur p-4 rounded-none">
+                  <div className="bg-white/90 backdrop-blur p-4 !rounded-lg">
                     <div className="text-3xl font-bold text-primary">{timeLeft.minutes}</div>
                     <div className="text-sm uppercase tracking-wider">{timeLabels.minutes}</div>
                   </div>
-                  <div className="bg-white/90 backdrop-blur p-4 rounded-none">
+                  <div className="bg-white/90 backdrop-blur p-4 !rounded-lg">
                     <div className="text-3xl font-bold text-primary">{timeLeft.seconds}</div>
                     <div className="text-sm uppercase tracking-wider">{timeLabels.seconds}</div>
                   </div>
@@ -116,7 +124,7 @@ function App() {
         </section>
 
         {/* Our Story */}
-        <section className="py-20 bg-white">
+        <section className="pt-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <Title className="block text-center mt-2 !mb-16 text-lg !text-primary">
 
@@ -219,9 +227,9 @@ function App() {
         </section>
 
         {/* Photo Gallery */}
-        <section className="py-20 bg-white">
+        <section className="pt-20 py-4 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <Title level={2} className="text-center mb-16">Մեր պահերը</Title>
+            <Title level={2} className="text-center mb-16">Մեր Լավագույն Պահերը</Title>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {IMAGES.gallery.map((image, index) => (
                 <div key={index} className="aspect-square">
@@ -232,7 +240,7 @@ function App() {
                       maskClassName: 'w-full !h-full',
                       toolbarRender: () => null,
                       imageRender: () => (
-                        <img src={image} className="h-[80vh] w-96 object-contain" />
+                        <img src={image} className="w-96 object-contain" />
                       )
                     }}
                     className="w-full !h-full object-cover"
@@ -245,10 +253,10 @@ function App() {
 
         {/* Footer */}
         <footer className="py-8 bg-dark text-white">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-4xl  px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="col-span-2">
-                <Title level={4} className="!text-white">Կապ</Title>
+              <div className="col-span-2 text-xl">
+                <Title level={3} className="!text-white">Կապ</Title>
                 <Text className="block !text-white">Հարցերի դեպքում կապվեք մեզ հետ՝</Text>
                 <Flex vertical gap={2}>
                   <a href="tel:+37494888082" className="!text-white hover:underline">
