@@ -1,21 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ["Kotayk", "Inter", "sans-serif"],
+        serif: ["Kotayk", "serif"],
       },
       colors: {
-        primary: '#D4B996',
-        secondary: '#F5E6E8',
-        dark: '#2C3639',
+        primary: "#D4B996",
+        secondary: "#F5E6E8",
+        dark: "#2C3639",
       },
     },
   },
   plugins: [],
-}
+};
