@@ -171,7 +171,7 @@ function App() {
                 <CalendarOutlined className="text-4xl text-primary mb-4" />
                 <Title level={3} className="font-serif">Երբ</Title>
                 <Text className="block text-lg font-medium">Շաբաթ, Մայիսի 17, 2025</Text>
-                <Text className="block text-lg">14:15 - 23:00</Text>
+                <Text className="block text-lg">14:15 - 24:00</Text>
               </Card>
 
               <Card className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur">
@@ -193,7 +193,7 @@ function App() {
                     // label: <div className="text-lg font-medium">12:15</div>,
                     children: (
                       < >
-                        <Title level={4} className="!text-primary mb-8">12:15 <br /> Պսակադրության Արարողություն</Title>
+                        <Title level={4} className="!text-primary mb-8">14:15 <br /> Պսակադրության Արարողություն</Title>
                         <a href='https://yandex.com/maps/-/CHf3yR0d' target='_blank'>
                           <Text className="text-gray-600">Խոր վիրապի վանք</Text>
                         </a>
@@ -253,11 +253,11 @@ function App() {
 
         {/* Footer */}
         <footer className="py-8 bg-dark text-white">
-          <div className="max-w-4xl  px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="col-span-2 text-xl">
+          <div className="max-w-4xl  px-4 text-center mx-auto">
+            <div className="rid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="col-span-2 !text-xl ">
                 <Title level={3} className="!text-white">Կապ</Title>
-                <Text className="block !text-white">Հարցերի դեպքում կապվեք մեզ հետ՝</Text>
+                <Text className="block !text-white text-xl">Հարցերի դեպքում կապվեք մեզ հետ՝</Text>
                 <Flex vertical gap={2}>
                   <a href="tel:+37494888082" className="!text-white hover:underline">
                     094 888 082
