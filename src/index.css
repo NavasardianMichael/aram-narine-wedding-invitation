@@ -16,6 +16,27 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Oldtimer";
+  src: url("./assets/fonts/fonter.am_oldtimer/Oldtimer.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NasaFont";
+  src: url("./assets/fonts/fonter.am_nasa-font/TTF/NasaFont.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BraindYerevan";
+  src: url("./assets/fonts/fonter.am_braind-yerevan/BraindYerevan.otf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,7 +48,7 @@
 
   body {
     @apply bg-white text-gray-800 font-sans;
-    font-family: "Kotayk", "Inter", "Noto Serif Armenian", sans-serif;
+    font-family: "BraindYerevan", "Inter", "Noto Serif Armenian", sans-serif;
   }
 
   h1,
@@ -40,7 +61,9 @@
   div,
   span,
   a {
-    font-family: "Kotayk", "Noto Serif Armenian", "Playfair Display", serif;
+    color: #6b6868 !important;
+    font-family: "BraindYerevan", "Noto Serif Armenian", "Playfair Display",
+      serif;
   }
 
   a {

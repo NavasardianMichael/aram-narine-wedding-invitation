@@ -2,7 +2,22 @@ import { CalendarOutlined, EnvironmentOutlined } from '@ant-design/icons';
 import { Card, ConfigProvider, Flex, Image, Timeline, Typography } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
-import { IMAGES } from './constants/images';
+
+const IMAGES = {
+  hero: './src/assets/images/IMG_3586.jpg',
+  story: {
+    proposal: './src/assets/images/IMG_7183.jpg',
+  },
+  gallery: [
+    './src/assets/images/IMG_6184.jpg',
+    './src/assets/images/IMG_1181.jpg',
+    './src/assets/images/IMG_0819.JPG',
+    './src/assets/images/IMG_3845.jpg',
+    './src/assets/images/IMG_5596.jpg',
+    './src/assets/images/IMG_8891.JPG',
+  ],
+  venue: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=500&fit=crop'
+};
 
 const { Title, Text } = Typography;
 
@@ -50,7 +65,7 @@ function App() {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: '#D4B996',
+          colorPrimary: '#6b6868',
           fontFamily: "'Playfair Display', serif",
         },
       }}
@@ -234,13 +249,10 @@ function App() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="col-span-2">
                 <Title level={4} className="!text-white">Կապ</Title>
-                <Text className="block text-white">Հարցերի դեպքում կապվեք մեզ հետ՝</Text>
+                <Text className="block !text-white">Հարցերի դեպքում կապվեք մեզ հետ՝</Text>
                 <Flex vertical gap={2}>
-                  <a href="tel:+37494888082" className="text-white hover:underline">
+                  <a href="tel:+37494888082" className="!text-white hover:underline">
                     094 888 082
-                  </a>
-                  <a href="mailto:narine_1999@bk.ru" target='_blank' className="text-white hover:underline" style={{ fontFamily: 'sans-serif' }}>
-                    narine_1999@bk.ru
                   </a>
                 </Flex>
               </div>

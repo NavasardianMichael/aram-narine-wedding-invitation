@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Kotayk", "Inter", "sans-serif"],
-        serif: ["Kotayk", "serif"],
+        sans: ["BraindYerevan", "Inter", "sans-serif"],
+        serif: ["BraindYerevan", "serif"],
       },
       colors: {
         primary: "#D4B996",
